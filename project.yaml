@@ -4,31 +4,35 @@ basic:
         production: 'https://test-wp5.pantheonsite.io/'
         staging: 'https://dev-wp5.pantheonsite.io/'
         development: ''
+    basicAuth:
+        production: { user: wp5, password: wp5 }
+        staging: { user: wp5, password: wp5 }
+        development: { user: '', password: '' }
     breakpoints:
         - 640
         - 1024
         - 1200
     pages:
-        - '--sample1-wp5-cupe'
-        - '--cupe3912'
-        - '--unpaidworkwontfly'
-        - '--atcomponent'
-        - '--scfp2881'
-        - '--cupe4600'
-        - '--cupe5678'
-        - '--cupe728'
-        - '--3651-cupe'
-        - '--cupe5167'
-        - '--5441-cupe'
-        - '--cupe561'
-        - '--4475-scfp'
-        - '--1252-cupe'
-        - '--606-cupe'
-        - '--cupe3338'
-        - '--cupe1883'
-        - '--cupeltc'
-        - '--cupepei'
-        - '--blendedfinancecritique'
+        - /--sample1-wp5-cupe
+        - /--cupe3912
+        - /--unpaidworkwontfly
+        - /--atcomponent
+        - /--scfp2881
+        - /--cupe4600
+        - /--cupe5678
+        - /--cupe728
+        - /--3651-cupe
+        - /--cupe5167
+        - /--5441-cupe
+        - /--cupe561
+        - /--4475-scfp
+        - /--1252-cupe
+        - /--606-cupe
+        - /--cupe3338
+        - /--cupe1883
+        - /--cupeltc
+        - /--cupepei
+        - /--blendedfinancecritique
     monitoring:
         days: {  }
         type: ''
@@ -39,7 +43,6 @@ basic:
 advanced:
     mask: ''
     remove: ''
-    isolate: ''
     delay: 15
     scroll: true
     headers:
@@ -47,7 +50,23 @@ advanced:
     cookies: ''
     custom_js: ''
     custom_css: ''
-    mock_content: ''
+    mock_content:
+        - { selector: '', type: title }
+    sensitivity: 15
+    night_mode: false
+    retina_images: false
+    single_ip: false
+    login:
+        type: none
+        click_element: false
+        click_element_selector: ''
+        login_url: ''
+        username: ''
+        password: ''
+        username_selector: ''
+        password_selector: ''
+        submit_selector: ''
+        after_login_selector: ''
     performance:
         workers_production: 30
         workers_nonproduction: 10
